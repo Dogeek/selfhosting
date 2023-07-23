@@ -1,0 +1,11 @@
+master:
+  hosts:
+    headserver:
+      ansible_host: 192.168.1.42
+
+workers:
+  hosts:
+    synology:
+      ansible_host: 192.168.1.43
+    raspberry01:
+      ansible_host: 192.168.1.44

@@ -1,0 +1,6 @@
+[submodule "kube-prometheus"]
+	path = kube-prometheus
+	url = git@github.com:prometheus-operator/kube-prometheus.git
+[submodule "cert-manager"]
+	path = cert-manager
+	url = git@github.com:cert-manager/cert-manager.git

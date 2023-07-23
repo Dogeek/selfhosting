@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+# Namespace definition
+- ./manifests/namespace.yaml
+# CRDs for prometheus operator
+- ../kube-prometheus/manifests/setup/0alertmanagerConfigCustomResourceDefinition.yaml
+- ../kube-prometheus/manifests/setup/0alertmanagerCustomResourceDefinition.yaml
+- ../kube-prometheus/manifests/setup/0podmonitorCustomResourceDefinition.yaml
+- ../kube-prometheus/manifests/setup/0probeCustomResourceDefinition.yaml
+- ../kube-prometheus/manifests/setup/0prometheusCustomResourceDefinition.yaml
+- ../kube-prometheus/manifests/setup/0prometheusagentCustomResourceDefinition.yaml
+- ../kube-prometheus/manifests/setup/0prometheusruleCustomResourceDefinition.yaml
+- ../kube-prometheus/manifests/setup/0scrapeconfigCustomResourceDefinition.yaml
+- ../kube-prometheus/manifests/setup/0servicemonitorCustomResourceDefinition.yaml
+- ../kube-prometheus/manifests/setup/0thanosrulerCustomResourceDefinition.yaml
+# Traefik setup
+- ./manifests/traefik.service-account.yaml
+- ./manifests/traefik.cluster-role.yaml
+- ./manifests/traefik.cluster-role-binding.yaml
+- ./manifests/traefik.deployment.yaml
+- ./manifests/traefik.web.service.yaml
+- ./manifests/traefik.dashboard.service.yaml
+# Cert-manager
+# Authentik for authentication
+# cloudflareddns for dynamic dns resolution

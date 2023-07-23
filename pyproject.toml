@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "selfhosting"
+version = "1.0.0"
+description = "Collection of kubernetes manifests to self-host my app stack"
+authors = ["Dogeek <simon.bordeyne@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+kubernetes = "^27.2.0"
+ansible = "^8.2.0"
+poethepoet = "^0.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
